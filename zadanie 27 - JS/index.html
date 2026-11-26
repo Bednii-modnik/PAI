@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n">
+    <button onclick="generuj()">Generuj</button>
+    <div id="tabela"></div>
+    <script>
+        function generuj(){
+            let tabela = document.getElementById("tabela");
+            tabela.innerHTML="";
+            let number = document.getElementById("n").value;
+            if(number<1 || number>10){
+                tabela.textContent = "podaj liczbę od 1 do 10"
+                return;
+            }
+            let table = document.createElement("table");
+            for(let i=1;i<=number;i++){
+                let tr = document.createElement("tr");
+                for(let j=1;j<=number;j++){
+                    let td = document.createElement("td");
+                    td.textContent = (i*j);
+                    td.style.border="1px solid black";
+                    if(i==j){
+                        td.style.backgroundColor = "LightBlue";
+                    }
+                    tr.appendChild(td);
+                }
+                table.appendChild(tr);
+            }
+            tabela.appendChild(table);
+            table.style.border="1px solid black";
+        }
+    </script>
+</body>
+</html>

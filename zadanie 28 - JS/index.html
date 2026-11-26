@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="pokaz()">Pokaż galerię</button>
+    <div id="galieria"></div>
+    <img src="https://tse2.mm.bing.net/th/id/OIP.ojRIuYHVLQkftd9PYHWqTAHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="gg" id="podgląd" height="250px">
+    <script>
+        let tab = [1,2,3,4];
+        function pokaz(){
+            let div = document.getElementById("galeria");
+            let el1 = document.createElement("img");
+            div.appendChild(el1)
+        }
+    </script>
+</body>
+</html>
